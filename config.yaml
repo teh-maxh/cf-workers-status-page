@@ -21,3 +21,17 @@ monitors:
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
+
+  - id: static # unique identifier
+    name: "Static files CDN"
+    url: 'https://static.maxh.me.uk/probe' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    
+  - id: IRC # unique identifier
+    name: "IRC"
+    url: 'https://irc.maxh.me.uk/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
