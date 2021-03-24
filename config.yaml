@@ -1,37 +1,37 @@
 settings:
   title: 'Status Page'
-  url: 'https://status.maxh.me.uk' # used for Slack messages
+  url: 'https://status.maxh.name' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All good'
-  notAllmonitorsOperational: 'Shit's fucked up'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'The shit that's all fucked up'
-  monitorLabelNoData: 'Fucked if I know'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  allmonitorsOperational: "All good"
+  notAllmonitorsOperational: "Shit's fucked up"
+  monitorLabelOperational: "Operational"
+  monitorLabelNotOperational: "The shit that's all fucked up"
+  monitorLabelNoData: "Fucked if I know"
+  dayInHistogramNoData: "No data"
+  dayInHistogramOperational: "All good"
+  dayInHistogramNotOperational: " incident(s)" # xx incident(s) recorded
 
 monitors:
   - id: main-site # unique identifier
     name: "Main site"
-    url: 'https://www.maxh.me.uk/' # URL to fetch
+    url: 'https://www.maxh.name/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
 
   - id: static # unique identifier
     name: "Static files CDN"
-    url: 'https://static.maxh.me.uk/' # URL to fetch
+    url: 'https://static.maxh.name/' # URL to fetch
     method: GET # default=GET
     expectStatus: 403 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     
   - id: IRC # unique identifier
     name: "IRC"
-    url: 'https://irc.maxh.me.uk/' # URL to fetch
+    url: 'https://irc.maxh.name/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
